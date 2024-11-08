@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import { SignedIn } from '@clerk/nextjs';
-import Header from './Header';
+import Header from '../components/Header';
 
 const ConditionalHeader = () => {
   const pathname = usePathname();

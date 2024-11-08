@@ -4,8 +4,9 @@ import {
   SignedOut,
   SignInButton,
 } from '@clerk/nextjs';
-import ConditionalHeader from '@/components/ConditionalHeader';
+import ConditionalHeader from '@/actions/ConditionalHeader';
 import './globals.css';
+import RoleRedirect from "@/actions/RoleRedirect";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body>
           <ConditionalHeader />
+          <RoleRedirect />
           <main>
             {children}
           </main>
