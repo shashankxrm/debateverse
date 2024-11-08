@@ -7,7 +7,7 @@ const Header = () => {
       <h1 className="text-2xl font-bold ml-10">DebateVerse</h1>
       <div>
         <SignedIn>
-          <UserButton />
+          <UserButton/>
         </SignedIn>
       </div>
     </header>

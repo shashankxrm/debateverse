@@ -26,7 +26,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        baseTheme: "system",
+        layout: {
+          unsafe_disableDevelopmentModeWarnings: true,
+        },
+        variables: { 
+          colorPrimary: "#3371FF" ,
+          fontSize: '16px'
+        },
+      }}
+    >
       <html lang="en">
         <body>
           <ConditionalHeader />

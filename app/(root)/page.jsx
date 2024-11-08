@@ -10,10 +10,10 @@ const Page = async () => {
         return null;
     }
   return (
-    <div>
-        User Homepage
+    <div className="container mx-auto">
+      <h1 className="text-3xl font-bold text-center">Welcome to User Home</h1>
     </div>
-  )
+  );
 }
 
 export default Page
