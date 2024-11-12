@@ -8,7 +8,7 @@ const Header = () => {
     <>
       <header className="flex justify-between items-center p-4 bg-gray-800 text-white">
         <div className='flex flex-row'>
-          <Image src="/assets/debateverselogo.png" alt="Logo" width={250} height={250} />
+          <Image src="/assets/dvlogo.png" alt="Logo" width={150} height={150} />
           
         </div>
         <div>
