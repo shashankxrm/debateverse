@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-
+import { dark } from "@clerk/themes"
 
 import {
   ClerkProvider,
@@ -30,13 +30,13 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider
       appearance={{
-        baseTheme: "system",
+        baseTheme: dark,
+        variables: { 
+          fontSize: '16px',
+          
+        },
         layout: {
           unsafe_disableDevelopmentModeWarnings: true,
-        },
-        variables: { 
-          colorPrimary: "#3371FF" ,
-          fontSize: '16px'
         },
       }}
     >
