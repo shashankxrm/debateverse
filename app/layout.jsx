@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import { dark } from "@clerk/themes"
+import ModeToggle from "@/components/ui/ModeToggle";
 
 import {
   ClerkProvider,
@@ -9,6 +10,7 @@ import {
 import ConditionalHeader from '@/actions/ConditionalHeader';
 import './globals.css';
 import RoleRedirect from "@/actions/RoleRedirect";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata = {
   title: "DebateVerse",
@@ -29,13 +31,21 @@ export default function RootLayout({ children }) {
         },
       }}
     >
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body>
-          <ConditionalHeader />
-          <RoleRedirect />
-          <main>
-            {children}
-          </main>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+            >
+              <ConditionalHeader />
+              <RoleRedirect />
+              <main>
+                {children}
+              </main>
+              <ModeToggle/>
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
