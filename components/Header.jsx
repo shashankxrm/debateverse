@@ -3,6 +3,8 @@ import Head from 'next/head';
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
+import ModeToggle from './ui/ModeToggle';
+
 
 const Header = () => {
   return (
@@ -12,6 +14,10 @@ const Header = () => {
           <Link href="/">
             <Image src="/assets/dvlogo.png" alt="Logo" width={150} height={150} />
           </Link>
+          
+        </div>
+        <div className='ml-auto mr-4  '>
+            
         </div>
         <div>
           <SignedIn>
